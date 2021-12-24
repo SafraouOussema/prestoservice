@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="home.html" class="logo"> <img class="logo-presto" src="images/logo.jpg" alt=""> Presto Service </a>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="course-2.html">service</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <section class="heading">
+        <h3> Nous contacter</h3>
+        <p> <a href="home.html">home >></a> contact </p>
+    </section>
+
+    <section class="contact">
+
+        <div class="icons-container">
+
+            <div class="icons">
+                <i class="fas fa-phone"></i>
+                <h3>Notre numéro</h3>
+                <p>70 817 080</p>
+                <p>20 685 454</p>
+            </div>
+
+            <div class="icons">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>presto.commercial@gnet.tn</p>
+            </div>
+
+            <div class="icons">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Notre adresse</h3>
+                <p>Immeuble Mak Crown , rue du lac Léman
+                    Les Berges du Lac 1053 Tunis – Tunisia</p>
+            </div>
+
+        </div>
+
+        <div class="row">
+                <form method="POST" action="https://formsubmit.co/pronetoussemagta@gmail.com"
+                enctype="multipart/form-data" method=”POST” enctype=”multipart/form-data” name=”EmailForm”>
+
+                <!-- Honeypot -->
+                <input type="text" name="_honey" style="display: none;">
+
+                <!-- Disable Captcha -->
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="hidden" name="_next" value="./home">
+
+                <h3> Entrer en contact </h3>
+                <input type="text" placeholder="votre nom" class="box" id="firstName" required>
+                <input type="number" placeholder="votre numéro" class="box" id="Numero" required>
+                <input type="email" placeholder="votre e-mail" class="box" id="Email" required>
+                <textarea name="" placeholder="votre message" id="" cols="30" rows="10" id="Comments"
+                    required></textarea>
+                <input type="submit" value="envoyer le message" class="btn">
+            </form>
+
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d949.3271378231424!2d10.240010878008244!3d36.83904758886329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd35472b7b72eb%3A0x4436b785302d10f9!2s1053%20Lac%20Leman%2C%20Tunis!5e0!3m2!1sfr!2stn!4v1640202216078!5m2!1sfr!2stn"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+    </section>
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Suivez nous</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            </div>
+
+        </div>
+
+        <div class="credit"> created by <span>Presto Service</span> | all rights reserved! </div>
+
+    </section>
+
+    <!-- footer section ends -->
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
