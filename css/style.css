@@ -37,6 +37,18 @@ section {
 
 }
 
+.title-section{
+  text-align: -webkit-center;
+
+}
+
+.omv{
+  display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
