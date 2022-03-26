@@ -331,6 +331,7 @@ section {
 .course-2 .box .image img {
   height: 22rem;
   width: 100% !important;
+  /* object-fit: cover; */
 }
 
 .course-2 .box .content span {
@@ -341,8 +342,8 @@ section {
 }
 
 .course-2 .box .content h3 {
-  color: #302851;
   line-height: 2;
+  text-align: center;
   margin-top: 1.5rem;
   font-size: 2rem;
 }
@@ -354,7 +355,7 @@ section {
   padding: 1rem 0;
 }
 
-.course-2 .box .content .icons {
+/* .course-2 .box .content {
   margin-top: 2rem;
   padding-top: 2rem;
   display: -webkit-box;
@@ -367,20 +368,19 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-}
+} */
 
-.course-2 .box .content .icons a {
-  font-size: 1.4rem;
+.course-2 .box .content a {
   color: #666;
 }
 
-.course-2 .box .content .icons a:hover {
-  color: #fa1d86;
+.course-2 .box .content a:hover {
+  color: #224bcf;
 }
 
-.course-2 .box .content .icons a i {
+.course-2 .box .content a i {
   padding-right: .5rem;
-  color: #fa1d86;
+  color: #224bcf;
 }
 
 .course-3 {
@@ -407,6 +407,14 @@ section {
   overflow: hidden;
   border-radius: .5rem;
   position: relative;
+  display: flex;
+  justify-content: center;
+}
+ 
+.course-3 .box .video img {
+  height: 70;
+  width: 70%;
+  object-fit: scale-down;
 }
 
 .course-3 .box .video video {
@@ -688,7 +696,18 @@ section {
   line-height: 2;
   font-size: 1.4rem;
   color: #666;
+  cursor: pointer;
+  position: relative;
 }
+
+/* .contact .icons-container .icons p[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    right: 5%;
+  } */
+
+
 
 .contact .row {
   display: -webkit-box;
@@ -797,7 +816,20 @@ section {
   section {
     padding: 3rem 2rem;
   }
+  .course-2 .box .content .tooltiptext {
+    top: 7% !important;
 }
+}
+
+@media (max-width: 843px) {
+    .course-2 .box .content .tooltiptext {
+        top: 10% !important;
+        transition: none !important;
+    }
+    .course-2 .box .content:hover .tooltiptext {
+      visibility: hidden !important;
+    }
+  }
 
 @media (max-width: 768px) {
   #menu-btn {
@@ -833,6 +865,13 @@ section {
     width: 95%;
     border-width: .2rem;
   }
+  .course-2 .box .content .tooltiptext {
+      top: 10% !important;
+      transition: none !important;
+  }
+  .course-2 .box .content:hover .tooltiptext {
+    visibility: hidden !important;
+  }
 }
 
 @media (max-width: 450px) {
@@ -841,3 +880,57 @@ section {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+/* Tooltip container */
+
+  
+  /* Tooltip text */
+  .course-2 .box .content .tooltiptext {
+    visibility: hidden;
+    width: minmax(31rem, 1fr);
+    background-color:#224bcf;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    padding: 5px 4px;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: fixed;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    opacity: 0.8;
+    transition: opacity 1s;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .course-2 .box .content:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* Tooltip text phone number */
+  .contact .icons-container .icons .numberTooltipText {
+    visibility: hidden;
+    width: minmax(31rem, 1fr);
+    background-color:#224bcf;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    padding: 5px 4px;
+    border-radius: 6px;
+   
+    /* Position the tooltip text phone number - see examples below! */
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  /* Show the tooltip text phone number when you mouse over the tooltip container */
+  .showNumberTooltipClass {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  

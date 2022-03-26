@@ -19,7 +19,17 @@ document.querySelectorAll('.course-3 .box .video video').forEach(vid =>{
     }
 
 });
-
+if(document.querySelector('#close-vid') != null){
 document.querySelector('#close-vid').onclick = () =>{
     mainVid.classList.remove('active');
+};
 }
+
+function copy(numberElementId) {
+    /* Get the text field */
+    var copyText = document.getElementById(numberElementId);
+  
+     /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.textContent);
+  
+  }
